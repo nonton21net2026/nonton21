@@ -18,9 +18,12 @@ h1{font-size:1.6rem;color:#fff;margin-bottom:10px;line-height:1.3}
 .meta{display:flex;gap:10px;flex-wrap:wrap;font-size:0.85rem;color:#7a7a9a;margin-bottom:10px}
 .rating{color:#f5c518;font-weight:700}
 .synopsis{color:#aaa;font-size:0.9rem;line-height:1.6}
-.btn-nonton{display:block;text-align:center;background:linear-gradient(135deg,#e50914,#c0000a);color:#fff;padding:14px;border-radius:10px;font-size:1rem;font-weight:700;text-decoration:none;text-transform:uppercase;letter-spacing:1px;margin:20px 0}
-.player{background:#000;border-radius:12px;overflow:hidden;margin:20px 0;border:1px solid #2a2a3a}
-.player iframe{width:100%;aspect-ratio:16/9;border:none;display:block}
+.thumb-wrap{position:relative;cursor:pointer;border-radius:12px;overflow:hidden;margin:20px 0;background:#000}
+.thumb-wrap img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;opacity:0.7}
+.thumb-wrap .no-poster{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,#13131a,#1a1a2e);display:flex;align-items:center;justify-content:center;font-size:4rem}
+.play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80px;height:80px;background:rgba(229,9,20,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#fff;transition:transform 0.2s,background 0.2s}
+.thumb-wrap:hover .play-btn{transform:translate(-50%,-50%) scale(1.1);background:rgba(229,9,20,1)}
+.play-label{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.8);color:#fff;padding:8px 20px;border-radius:20px;font-size:0.9rem;font-weight:700;white-space:nowrap}
 .info-box{background:#13131a;border:1px solid #2a2a3a;border-radius:8px;padding:12px;margin:16px 0;font-size:0.85rem;color:#7a7a9a}
 .info-box a{color:#e50914}
 @media(max-width:600px){.film-info{flex-direction:column}.film-info img{width:100%;max-width:200px}h1{font-size:1.3rem}}
@@ -37,14 +40,24 @@ h1{font-size:1.6rem;color:#fff;margin-bottom:10px;line-height:1.3}
 <p class="synopsis">The prequel to Jujutsu Kaisen (2020), where a high schooler gains control of an extremely powerful cursed spirit and gets enrolled in the Tokyo Prefectural Jujutsu High School by Jujutsu Sorcerers.</p>
 </div>
 </div>
-<a class="btn-nonton" href="#player">▶ NONTON SEKARANG</a>
-<div class="player" id="player">
-<iframe src="https://streamimdb.ru/embed/movie/tt14331144" allowfullscreen></iframe>
+
+<div class="thumb-wrap" onclick="watchFilm()">
+<img src="https://m.media-amazon.com/images/M/MV5BMzNhZTdmNDYtNTA0NC00MmNmLWIzYjUtNjg5NzNlYWQ0N2E5XkEyXkFqcGc@.jpg" alt="Jujutsu Kaisen 0">
+<div class="play-btn">▶</div>
+<div class="play-label">▶ Klik untuk Nonton</div>
 </div>
+
 <div class="info-box">
-📌 Jika player tidak bisa diputar, coba refresh halaman.<br>
+📌 Film akan terbuka di tab baru.<br>
 🔗 <a href="https://www.imdb.com/title/tt14331144" target="_blank">Lihat di IMDb</a>
 </div>
 </div>
+
+<script>
+function watchFilm() {
+  window.open('SMARTLINK_DISINI', '_blank');
+  window.location.href = 'https://streamimdb.ru/embed/movie/tt14331144';
+}
+</script>
 </body>
 </html>
